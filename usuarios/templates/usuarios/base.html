@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}ERP System{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'usuarios/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ERP Project</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+    
+           
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 ERP Demo | Django + MySQL</p>
+    </footer>
+</body>
+</html>
